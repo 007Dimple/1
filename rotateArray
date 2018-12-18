@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+void arls(int arr[] , int n)
+{
+int temp=arr[0],i;
+for( i=0;i<n-1;i++)
+{
+    arr[i]=arr[i+1];
+}
+arr[i]=temp;
+}
+void arrayrotate(int arr[] , int d,int n)
+{
+for(int i=0;i<d;i++)
+    arls(arr , n);
+}
+void printA(int arr[],int n)
+{ for(int i=0 ;i<n;i++)
+    cout<<arr[i]<<" ";
+
+}
+int main()
+{
+int arr[]={34,78,98,77,1,100};
+int n=sizeof(arr) / sizeof(arr[0]);
+//function calling//
+arrayrotate(arr,3,n);
+printA(arr,n);
+
+return 0;
+}
